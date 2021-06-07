@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>365 Entertainment</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li class="logo"><a href="index.html">365</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="#">TV Series</a></li>
+                <li><a href="#">Audio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="slideshow-container">
+        <div class="slides"><img src="./image/slide show/lagaan.jpg" alt="lagaan"></div>
+        <div class="slides"><img src="./image/slide show/dark knight rises.jpg" alt="dark knight rises"></div>
+        <div class="slides"><img src="./image/slide show/hitman.jpg" alt="hitman bodyguard"></div>
+        <div class="slides"><img src="./image/slide show/imitaion.jpg" alt="the imitaion game"></div>
+        <div class="slides"><img src="./image/slide show/joker.jpg" alt="joker"></div>
+        <!-- next and previous button -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div class="popular">
+        <div>
+            <div>Popular in Action</div>
+            <div class="genre-container">
+                <div class="card">
+                    <img src="./image/action/extraction.jpg" alt="extraction">
+                    <div><center><strong>Extraction</strong><br>Action & Thriller</center></div>
+                </div>
+                <div class="card">
+                    <img src="./image/action/Hobbs & Shaw.jpg" alt="Hobbs & Shaw">
+                    <div><center><strong>Hobbs & Shaw</strong><br>Action & Comedy</center></div>
+                </div>
+                <div class="card">
+                    <img src="./image/action/kgf.jpg" alt="KGF">
+                    <div><center><strong>KGF</strong><br>Action & Romance</center></div>
+                </div>
+                <div class="card">
+                    <img src="./image/action/monter hunter.jpg" alt="Monster Hunter">
+                    <div><center><strong>Monster Hunter</strong><br>Action & Fantasy</center></div>
+                </div>
+                <div class="card">
+                    <img src="./image/action/tenet.jpg" alt="tenet">
+                    <div><center><strong>Tenet</strong><br>Action & Thriller</center></div>
+                </div>
+                <div class="card">
+                    <img src="./image/action/war.jpg" alt="War">
+                    <div><center><strong>War</strong><br>Action & Thriller</center></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>Popular in Drama</div>
+            <div class="genre-container">
+                <div class="card">
+                    <img src="./image/drama/alive.jpg" alt="alive">
+                    <div><center><strong>Alive</strong><br>Drama & Thriller</center></div>
+                </div>
+                <div class="card">
+                    <img src="./image/drama/dear zindagi.jpg" alt="dear zindagi">
+                    <div><center><strong>Dear Zindagi</strong><br>Drama & Romance</center></div>
+                </div>
+                <div class="card">
+                    <img src="./image/drama/parasite.jpg" alt="parasite">
+                    <div><center><strong>Parasite</strong><br>Drama & Comedy</center></div>
+                </div>
+                <div class="card">
+                    <img src="./image/drama/parmanu.jpg" alt="parmanu">
+                    <div><center><strong>Parmanu</strong><br>Drama & Action</center></div>
+                </div>
+                <div class="card">
+                    <img src="./image/drama/shutter island.jpg" alt="shutter island">
+                    <div><center><strong>Shutter Island</strong><br>Drama & Thriller</center></div>
+                </div>
+                <div class="card">
+                    <img src="./image/drama/the fault in our stars.jpg" alt="tfios">
+                    <div><center><strong>The Fault in Our Stars</strong><br>Drama & Romance</center></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>Popular in Sci-Fi</div>
+            <div class="genre-container">
+                <div class="card">
+                    <img src="./image/Sci-fi/arrival.jpg" alt="arrival">
+                    <div><center><strong>Arrival</strong><br>Sci-Fi & Thriller</center></div>
+                </div>
+                <div class="card">
+                    <img src="./image/Sci-fi/avngers.jpg" alt="Avengers">
+                    <div><center><strong>Avengers:Endgame</strong><br>Sci-Fi & Thriller</center></div>
+                </div>
+                <div class="card">
+                    <img src="./image/Sci-fi/coma.jpg" alt="coma">
+                    <div><center><strong>Coma</strong><br>Sci-Fi & Action</center></div>
+                </div>
+                <div class="card">
+                    <img src="./image/Sci-fi/logan.jpg" alt="logan">
+                    <div><center><strong>Monster Hunter</strong><br>Sci-Fi & Action</center></div>
+                </div>
+                <div class="card">
+                    <img src="./image/Sci-fi/oblivion.jpg" alt="oblivion">
+                    <div><center><strong>Oblivion</strong><br>Sci-Fi & Action</center></div>
+                </div>
+                <div class="card">
+                    <img src="./image/Sci-fi/venom.jpg" alt="venom">
+                    <div><center><strong>Venom</strong><br>Sci-Fi & Action</center></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="index.html" class="logo">365</a>
+        <div>Powered by 365 Entertainment Portal 2019. All Rights Reserved.</div>
+    </footer>
+    <script>
+   		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n){
+			showSlides(slideIndex += n);
+		}
+
+		function showSlides(n){
+			var i = 0;
+			var slides = document.getElementsByClassName("slides");
+			if(n > slides.length){
+				slideIndex = 1;
+			}
+			if(n < 1){
+				slideIndex = slides.length;
+			}
+			for(i = 0; i < slides.length; i++){
+				slides[i].style.display = "none";
+			}
+			slides[slideIndex-1].style.display = "block";
+		}
+    </script>
+</body>
+</html>

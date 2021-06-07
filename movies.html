@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movies</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul class="navbar">
+				<li class="logo"><a href="index.html">365</a></li>
+				<li><strong><a href="movies.html">Movies</a></strong></li>
+				<li><strong><a href="#">TV Series</a></strong></li>
+				<li><strong><a href="#">Audio</a></strong></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="carousel-container">
+		<div class="slides">
+			<img src="./image/slide show/dark knight rises.jpg" alt="The Dark Knight">
+		</div>
+		<div class="slides">
+			<img src="./image/slide show/hitman.jpg" alt="hitman">
+		</div>
+		<div class="slides">
+			<img src="./image/slide show/imitaion.jpg" alt="imitation">
+		</div>
+		<div class="slides">
+			<img src="./image/slide show/joker.jpg" alt="joker">
+		</div>
+		<div class="slides">
+			<img src="./image/slide show/lagaan.jpg" alt="lagaan">
+		</div>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	<div class="genre-search">
+		<div class="dropdown">
+			<button class="dropbtn">Genre&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down"></i></button>
+			<div class="dropdown-content">
+				<a href="#" onclick="filterSelection('all')"><center>All</center></a>
+				<a href="#" onclick="filterSelection('action')"><center>Action</center></a>
+				<a href="#" onclick="filterSelection('drama')"><center>Drama</center></a>
+				<a href="#" onclick="filterSelection('scifi')"><center>Sci-Fi</center></a>
+			</div>
+		</div>
+		<div class="searchbar">
+			<input type="text" id="myInput" class="search" onkeyup="movieSearch()" placeholder="Search your favourite movie title">
+			<i class="fa fa-search"></i>
+		</div>
+	</div>
+	<div class="search-grid" id="items">
+		<div class="filter drama">
+			<img src="image/movies/angrezimedium.jpg" alt="Angrezi Medium">
+			<div><center><strong>Angrezi Medium</strong><br>Drama, Hindi.</center></div>
+		</div>
+		<div class="filter action scifi">
+			<img src="image/movies/bladerunner2049.jpg" alt="Blade Runner 2049">
+			<div><center><strong>Blade Runner 2049</strong><br>Thriller, Action & Sci-Fi.</center></div>
+		</div>
+		<div class="filter action scifi">
+			<img src="image/movies/breach.jpg" alt="Breach">
+			<div><center><strong>Breach</strong><br>Action & Sci-Fi.</center></div>
+		</div>
+		<div class="filter action scifi">
+			<img src="image/movies/chaoswalking.png" alt="Chaos Walking">
+			<div><center><strong>Chaos Walking</strong><br>Action, Sci-Fi & Thriller.</center></div>
+		</div>
+		<div class="filter drama">
+			<img src="image/movies/chhapaak.jpg" alt="Chhapaak">
+			<div><center><strong>Chhapaak</strong><br>Biography & Drama.</center></div>
+		</div>
+		<div class="filter drama">
+			<img src="image/movies/chhichhore.jpg" alt="Chhichhore">
+			<div><center><strong>Chhichhore</strong><br>Comedy, Drama & Romance.</center></div>
+		</div>
+		<div class="filter scifi">
+			<img src="image/movies/cosmos.jpg" alt="Cosmos">
+			<div><center><strong>Cosmos</strong><br>Documentry.</center></div>
+		</div>
+		<div class="filter scifi">
+			<img src="image/movies/doctorstrange.jpg" alt="Doctor Strange">
+			<div><center><strong>Doctor Strange</strong><br>Action, Sci-Fi & Superhero.</center></div>
+		</div>
+		<div class="filter drama scifi">
+			<img src="image/movies/doctorwho.jpg" alt="Doctor Who">
+			<div><center><strong>Doctor Who</strong><br>Adventure, Drama & Sci-Fi.</center></div>
+		</div>
+		<div class="filter drama">
+			<img src="image/movies/dreamgirl.jpg" alt="Dream Girl">
+			<div><center><strong>Dreamgirl</strong><br>Drama & Comedy.</center></div>
+		</div>
+		<div class="filter drama">
+			<img src="image/movies/freedom.jpg" alt="Freedom">
+			<div><center><strong>Freedom</strong><br>Drama & Musical.</center></div>
+		</div>
+		<div class="filter drama">
+			<img src="image/movies/jobless.jpg" alt="Jobless">
+			<div><center><strong>Jobless</strong><br>Short, Comedy & Drama.</center></div>
+		</div>
+		<div class="filter drama">
+			<img src="image/movies/johnday.jpg" alt="John Day">
+			<div><center><strong>John Day</strong><br>Thriller, Drama, World Cinema & Bollywood.</center></div>
+		</div>
+		<div class="filter action">
+			<img src="image/movies/killbill.jpg" alt="Kill Bill">
+			<div><center><strong>Kill Bill</strong><br>Action, Thriller & Crime Film.</center></div>
+		</div>
+		<div class="filter scifi">
+			<img src="image/movies/life.jpg" alt="Life">
+			<div><center><strong>Life</strong><br>Thriller, Horror & Sci-Fi.</center></div>
+		</div>
+		<div class="filter action drama scifi">
+			<img src="image/movies/looper.jpg" alt="Looper">
+			<div><center><strong>Looper</strong><br>Action, Drama & Sci-Fi.</center></div>
+		</div>
+		<div class="filter action scifi">
+			<img src="image/movies/lucy.jpg" alt="Lucy">
+			<div><center><strong>Lucy</strong><br>Action, Thriller & Sci-Fi.</center></div>
+		</div>
+		<div class="filter action scifi">
+			<img src="image/movies/minorityreport.jpg" alt="Minority Report">
+			<div><center><strong>Minority Report</strong><br>Action, Thriller, Cyberpunk & Sci-Fi.</center></div>
+		</div>
+		<div class="filter drama scifi">
+			<img src="image/movies/missionmangal.jpg" alt="Mission Mangal">
+			<div><center><strong>Mission Mangal</strong><br>Drama & Sci-Fi.</center></div>
+		</div>
+		<div class="filter drama">
+			<img src="image/movies/nomadland.jpg" alt="Nomadland">
+			<div><center><strong>Nomadland</strong><br>Drama, Western & Indie Film.</center></div>
+		</div>
+		<div class="filter action scifi">
+			<img src="image/movies/pacificrim.jpg" alt="Pacific Rim">
+			<div><center><strong>Pacific Rim</strong><br>Action, Adventure & Sci-Fi.</center></div>
+		</div>
+		<div class="filter drama">
+			<img src="image/movies/perfect.jpg" alt="Perfect">
+			<div><center><strong>Perfect</strong><br>Thriller, Drama & Crime Novel.</center></div>
+		</div>
+		<div class="filter drama">
+			<img src="image/movies/pink.jpg" alt="Pink">
+			<div><center><strong>Pink</strong><br>Thriller, Drama & Crime Film.</center></div>
+		</div>
+		<div class="filter action">
+			<img src="image/movies/piratesofthecaribbean.jpg" alt="Pirates Of The Caribbean">
+			<div><center><strong>Pirates Of The Caribbean</strong><br>Action, Adventure & Comedy.</center></div>
+		</div>
+		<div class="filter action drama scifi">
+			<img src="image/movies/prometheus.jpg" alt="Prometheus">
+			<div><center><strong>Prometheus</strong><br>Action, Drama, Horror & Sci-Fi.</center></div>
+		</div>
+		<div class="filter drama scifi">
+			<img src="image/movies/proximity.jpg" alt="Proxymity">
+			<div><center><strong>Proximity</strong><br>Drama, Sci-Fi & Mystery.</center></div>
+		</div>
+		<div class="filter drama">
+			<img src="image/movies/queenofkatwe.jpg" alt="Queen Of Katwe">
+			<div><center><strong>Queen Of Katwe</strong><br>Drama & Sports.</center></div>
+		</div>
+		<div class="filter drama">
+			<img src="image/movies/ribbon.jpg" alt="Ribbon">
+			<div><center><strong>Ribbon</strong><br>Drama & Children's Film.</center></div>
+		</div>
+		<div class="filter drama action">
+			<img src="image/movies/shaolin.jpg" alt="Shaolin">
+			<div><center><strong>Shaolin</strong><br>Action & Drama.</center></div>
+		</div>
+		<div class="filter action">
+			<img src="image/movies/siege.jpg" alt="Siege">
+			<div><center><strong>Siege</strong><br>Action & Short.</center></div>
+		</div>
+		<div class="filter drama">
+			<img src="image/movies/talvar.jpg" alt="Talvar">
+			<div><center><strong>Talvar</strong><br>Thriller, Drama & Mistery.</center></div>
+		</div>
+		<div class="filter action">
+			<img src="image/movies/tanhaji.jpg" alt="Tanhaji">
+			<div><center><strong>Tanhaji</strong><br>Action & Historical Film.</center></div>
+		</div>
+		<div class="filter drama">
+			<img src="image/movies/thecoldofthewild.jpg" alt="The Cold Of The Wild">
+			<div><center><strong>The Cold Of The Wild</strong><br>Adventure & Drama.</center></div>
+		</div>
+		<div class="filter action scifi">
+			<img src="image/movies/thorragnarok.jpg" alt="Thor Ragnarok">
+			<div><center><strong>Thor Ragnarok</strong><br>Action, Sci-Fi & Superhero.</center></div>
+		</div>
+		<div class="filter action drama">
+			<img src="image/movies/tsa.jpg" alt="The Sorcerer's Apprentice">
+			<div><center><strong>The Sorcerer's Apprentice</strong><br>Action, Drama & Comedy.</center></div>
+		</div>
+		<div class="filter action scifi">
+			<img src="image/movies/xmen.jpg" alt="X-Men: Dark Phoenix">
+			<div><center><strong>X-Men: Dark Phoenix</strong><br>Action, Sci-Fi & Superhero.</center></div>
+		</div>
+	</div>
+	<footer>
+		<a href="index.html" class="logo">365</a>
+		<div>Powered by 365 Entertainment Portal 2019. All Rights Reserved.</div>
+	</footer>
+	<script type="text/javascript">
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n){
+			showSlides(slideIndex += n);
+		}
+
+		function showSlides(n){
+			var i = 0;
+			var slides = document.getElementsByClassName("slides");
+			if(n > slides.length){
+				slideIndex = 1;
+			}
+			if(n < 1){
+				slideIndex = slides.length;
+			}
+			for(i = 0; i < slides.length; i++){
+				slides[i].style.display = "none";
+			}
+			slides[slideIndex-1].style.display = "block";
+		}
+
+		filterSelection("all")
+		function filterSelection(c) {
+		  var x, i;
+		  x = document.getElementsByClassName("filter");
+		  if (c == "all") c = "";
+		  for (i = 0; i < x.length; i++) {
+		    removeClass(x[i], "show");
+		    if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+		  }
+		}
+
+		function addClass(element, name) {
+		  var i, arr1, arr2;
+		  arr1 = element.className.split(" ");
+		  arr2 = name.split(" ");
+		  for (i = 0; i < arr2.length; i++) {
+		    if (arr1.indexOf(arr2[i]) == -1) {
+		      element.className += " " + arr2[i];
+		    }
+		  }
+		}
+
+		// Hide elements that are not selected
+		function removeClass(element, name) {
+		  var i, arr1, arr2;
+		  arr1 = element.className.split(" ");
+		  arr2 = name.split(" ");
+		  for (i = 0; i < arr2.length; i++) {
+		    while (arr1.indexOf(arr2[i]) > -1) {
+		      arr1.splice(arr1.indexOf(arr2[i]), 1);
+		    }
+		  }
+		  element.className = arr1.join(" ");
+		}
+
+		function movieSearch(){
+			var ip, filter, div, gridDiv;
+			input = document.getElementById("myInput");
+		    filter = input.value.toUpperCase();
+		    div = document.getElementById("items");
+		    gridDiv = div.getElementsByClassName("filter");
+		    for (i = 0; i < gridDiv.length; i++) {
+		        title = gridDiv[i].getElementsByTagName("strong")[0];
+		        txtValue = title.textContent || title.innerText;
+		        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		            gridDiv[i].style.display = "";
+		        } else {
+		            gridDiv[i].style.display = "none";
+		        }
+		    }
+		}
+	</script>
+</body>
+</html>
